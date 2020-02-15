@@ -22,3 +22,8 @@ jobs:
     - run: npm test
       env:
         CI: true
+        APP_NAME: restbest
+        APP_VERSION: 1.0
+        MASTER_KEY: yourSecretMasterKey
+        JWT_SECRET: yourSecretKey
+        DB_URI: dbserver://asdf
