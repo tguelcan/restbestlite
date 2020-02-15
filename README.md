@@ -1,4 +1,9 @@
 
+
+[![Build Status](https://travis-ci.com/tguelcan/restbestlite.svg?branch=master)](https://travis-ci.com/tguelcan/restbestlite) 
+[![dependencies Status](https://david-dm.org/tguelcan/restbestlite/status.svg)](https://david-dm.org/tguelcan/restbestlite) 
+[![devDependencies Status](https://david-dm.org/tguelcan/restbestlite/dev-status.svg)](https://david-dm.org/tguelcan/restbestlite?type=dev)
+
 **restbest lite is a lite verion of restbest generator. It is a customizable rest backend and productive generator. It is based on NodeJS, Restify.**
 
 - RESTful - It follows the best practices
