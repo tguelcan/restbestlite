@@ -31,7 +31,6 @@ $ yarn run generate # generate a new /api endpoint or sercice
 ```
 
 # 🚀 Getting started - Playing locally
-## Easy to use with npx (recommended)
 
 ## Manual Setup
 1. Clone the repository and install dependencies with 'yarn' or 'npm install'
