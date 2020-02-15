@@ -45,7 +45,7 @@ Restify server listening on http://0.0.0.0:9000, in development mode
 
 *And voila! We have connected our restful backend application!*
 
-<img src="https://media.giphy.com/media/mks5DcSGjhQ1a/source.gif" width="400">
+<img src="https://media.giphy.com/media/2wSe48eAUC15p38UqO/source.gif" width="400">
 
 # 🤖 Use the Generator
 ```bash
