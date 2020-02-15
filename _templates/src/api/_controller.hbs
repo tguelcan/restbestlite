@@ -1,0 +1,36 @@
+import { NotFoundError } from 'restify-errors'
+// import {{pascalCase endpointName}} from './model'
+
+export const getAll = async(req, res) => {
+    res.json([])
+}
+
+export const getOne = async({ params }, res, next) => {
+    if(!params.id) {
+        return next(new NotFoundError())
+    }
+    res.json({})
+}
+
+export const postOne = async({ body }, res) => {
+    res.json(201, body)
+}
+
+export const patchOne = async({ params, body }, res, next) => {
+    if(!params.id) {
+        return next(new NotFoundError())
+    }
+    res.json(body)
+}
+
+export const deleteOne = async({ params }, res, next) => {
+    if(!params.id) {
+        return next(new NotFoundError())
+    }
+    res.json('success')
+}
+
+export const deleteAll = async(req, res) => {
+    // await {{pascalCase endpointName}}.deleteMany()
+    res.json('success')
+}

@@ -1,0 +1,86 @@
+{
+  "name": "restbestlite",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Tayfun Guelcan",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "dev": "nodemon --exec babel-node src/server.js",
+    "build": "babel src -d lib",
+    "serve": "node dist/server.js",
+    "docs": "apidoc -i src -o docs && apidoc-markdown -p docs -o API.md",
+    "heroku-postbuild": "npm run build",
+    "start": "node .",
+    "test": "jest",
+    "test:coverage": "yarn run test --coverage",
+    "generate": "plop"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2",
+    "restify-jwt-community": "^1.1.2",
+    "restify-router": "^0.5.1",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/plugin-transform-parameters": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "apidoc": "^0.20.0",
+    "apidoc-markdown": "^0.2.1",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "babel-plugin-root-import": "^6.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "plop": "^2.5.3",
+    "superagent": "^5.2.1",
+    "supertest": "^4.0.2"
+  },
+  "apidoc": {
+    "name": "restbestLite",
+    "description": "restBest apiDoc Documentation",
+    "title": "restBest apiDoc Documentation",
+    "url": "/api"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ]
+  }
+}
